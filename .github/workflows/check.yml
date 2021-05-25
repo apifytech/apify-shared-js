@@ -13,7 +13,6 @@ jobs:
                 with:
                     token: ${{ secrets.GH_TOKEN }}
                     fetch-depth: 0 # we need to pull everything to allow lerna to detect what packages changed
-                    ref: master
             -   uses: actions/setup-node@v2
                 with:
                     node-version: 14
