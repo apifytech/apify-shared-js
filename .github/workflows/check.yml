@@ -21,7 +21,8 @@ jobs:
                     git config --global user.name 'Apify Release Bot'
                     git config --global user.email 'noreply@apify.com'
                     echo '123' > test.txt
-                    git commit -am 'chore: verify we can commit to master via CI [skip ci]'
+                    git add .
+                    git commit -m 'chore: verify we can commit to master via CI [skip ci]'
                     git push
                 env:
                     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
